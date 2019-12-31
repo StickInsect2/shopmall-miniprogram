@@ -14,16 +14,16 @@ class Home extends Base {
 
     }
     this.request(params);
-    // wx.request({
-    //   url: "banner/" + id,
-    //   method: 'GET',
-    //   success: function (res) {
-    //     callback(res);
-    //   },
-    //   fail: function (res) {
-    //     console.log(res);
-    //   }
-    // })
+  }
+
+  getThemeData(callback) {
+    var params = {
+      url: 'theme?ids=1,2,3',
+      sCallback: function (res) {
+        callback && callback(res);
+      }
+    }
+    this.request(params);
   }
 }
 

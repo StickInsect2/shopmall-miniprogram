@@ -1,9 +1,31 @@
 <!--pages/home/home.wxml-->
-<view>测试</view>
 <view>
-<swiper>
+
+	<swiper class="swiper" indicator-dots="true" autoplay="true">
+		<block wx:for="{{bannerArr}}" wx:key="index">
+			<swiper-item class="banner-item">
+				<image src="{{item.img.url}}" mode="aspectFill"></image>
+			</swiper-item>
+		</block>
+	</swiper>
 
 
-</swiper>
-
+	<view>
+		<!--主题精选-->
+        <view class="home-main-theme">
+            <view class="home-main-header">精选主题</view>
+            <view class="theme-box">
+                <block wx:for="{{themeArr}}" wx:key="index">
+                    <view wx:if="{{index==2}}" class="theme-item big" bindtap="onThemesItemTap" data-id="{{item.id}}" data-name="{{item.name}}">
+                        <image src="{{item.topic_img.url}}"></image>
+                    </view>
+                    <view wx:else class="theme-item" bindtap="onThemesItemTap" data-id="{{item.id}}" data-name="{{item.name}}">
+                        <image src="{{item.topic_img.url}}"></image>
+                    </view>
+                </block>
+            </view>
+        </view>
+      
+	
+	</view>
 </view>

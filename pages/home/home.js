@@ -8,15 +8,26 @@ Page({
 
   data: {
 
+
   },
   onLoad: function () {
     this._loadData();
   },
   _loadData: function () {
     var id = 1;
-    var data = home.getBannerData(id, (res) => {
-      console.log(res);
+    home.getBannerData(id, (res) => {
+      this.setData({
+        bannerArr: res
+      })
+
     });
+
+    home.getThemeData((res) => {
+
+      this.setData({
+        themeArr: res
+      })
+    })
 
   }
 
