@@ -1,0 +1,9 @@
+<!--pages/home/home.wxml-->
+<view>测试</view>
+<view>
+<swiper>
+
+
+</swiper>
+
+</view>
