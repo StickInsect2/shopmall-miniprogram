@@ -1,6 +1,6 @@
 <import src="../tpls/products/products-tpl.wxml"/>
 
-<view class="container home-container" hidden="{{!loadingHidden}}">
+<view class="container home-container" >
 
 
     <swiper indicator-dots="true" autoplay="true" class="swiper">
@@ -38,8 +38,3 @@
 
 
 </view>
-
-
-<loading hidden="{{loadingHidden}}">
-    加载中...
-</loading>
