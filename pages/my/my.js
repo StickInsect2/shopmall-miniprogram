@@ -27,24 +27,11 @@ Page({
         }
     },
 
-    onGotUserInfo:function(e){
-        this.setData({
-            userInfo:e.detail
-        });
-    },
-
     _loadData:function(){
-        var that=this;
-        // my.getUserInfo((data)=>{
-        //     that.setData({
-        //         userInfo:data
-        //     });
-
-        // });
-
         this._getOrders();
         order.execSetStorageSync(false);  //更新标志位
     },
+    
 
     /**地址信息**/
     _getAddressInfo:function(){

@@ -1,4 +1,3 @@
-
 import {Base} from 'base.js';
 import { Config } from 'config.js';
 
@@ -68,8 +67,6 @@ class Address extends Base{
             country =res.countyName || res.country,
             detail =res.detailInfo || res.detail;
         var totalDetail=city+country+detail;
-
-        console.log(res);
 
         //直辖市，取出省部分
         if(!this.isCenterCity(province)) {

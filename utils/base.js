@@ -1,6 +1,3 @@
-/**
- * Created by jimmy-jiang on 2016/11/21.
- */
 import { Token } from 'token.js';
 import { Config } from 'config.js';
 

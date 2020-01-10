@@ -1,6 +1,4 @@
-/**
- * Created by jimmy on 17/2/26.
- */
+
 import {Base} from '../../utils/base.js';
 
 class Category extends Base {

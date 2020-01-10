@@ -1,7 +1,7 @@
 <view class="container cart-container">
     <block wx:if="{{cartData.length>0}}">
         <view class="cart-box">
-            <block wx:for="{{cartData}}"  wx:key="index">
+            <block wx:for="{{cartData}}" wx:key="index">
                 <view class="cart-item {{deleteFlag&&index==currentIndex?'showDeleteBtn':'hideDeleteBtn'}}">
                     <view class="cart-item-main" data-id="{{item.id}}" data-index="{{index}}">
                         <view   class="cart-item-checkbox" ontap="toggleSelect" data-id="{{item.id}}" data-status="{{item.selectStatus}}">

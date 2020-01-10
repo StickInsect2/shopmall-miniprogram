@@ -1,10 +1,14 @@
-
-<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
-
 <view class="container my-container" hidden="{{!loadingHidden}}">
+
+
   <view class="my-header">
-    <image src="{{userInfo.avatarUrl}}"></image>
-    <text class="name">{{userInfo.nickName}}</text>
+    <!-- <image src="{{userInfo.avatarUrl}}"></image>
+    <text class="name">{{userInfo.nickName}}</text> -->
+
+    <open-data type="userAvatarUrl" class="avatar"></open-data>    
+    <open-data type="userNickName" lang="zh_CN" class="nickname"></open-data>    
+
+
   </view>
   <!--地址管理-->
   <view class="my-address">
@@ -33,7 +37,7 @@
   <view class="my-order">
     <view class="item-title">我的订单</view>
     <view class="item-main">
-      <block wx:for="{{orderArr}}"  wx:key="index">
+      <block wx:for="{{orderArr}}" wx:key="index">
         <view class="order-item">
           <view class="order-header" ontap="showOrderDetailInfo" data-id="{{item.id}}">
             <text>订单编号:</text>
@@ -61,10 +65,7 @@
       </block>
     </view>
   </view>
-
 </view>
-
-
-<!-- <loading hidden="{{loadingHidden}}">
+<loading hidden="{{loadingHidden}}">
   加载中...
-</loading> -->
+</loading>

@@ -1,6 +1,3 @@
-/**
- * Created by jimmy on 17/03/09.
- */
 
 import {Base} from '../../utils/base.js'
 

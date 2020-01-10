@@ -1,6 +1,4 @@
-/**
- * Created by jimmy on 17/03/05.
- */
+
 import {Base} from '../../utils/base.js';
 
 /*

@@ -18,36 +18,42 @@ Page({
         * 2.旧的订单
         * */
         onLoad: function (options) {
-            var flag=options.from=='cart',
-                that=this;
-            this.data.fromCartFlag=flag;
-            this.data.account=options.account;
 
-            //来自于购物车
-            if(flag) {
-                this.setData({
-                    productsArr: cart.getCartDataFromLocal(true),
-                    account:options.account,
-                    orderStatus:0
-                });
-
-                /*显示收获地址*/
-                address.getAddress((res)=> {
-                    that._bindAddressInfo(res);
-                });
-            }
-
-            //旧订单
-            else{
-                this.data.id=options.id;
+            if(options.from = 'cart'){
+                this._fromCart(options.account);
+            }else{
+                this._fromOrder(options.id);
             }
         },
 
         onShow:function(){
-            if(this.data.id) {
+            if(this.data.id){
+                this._fromOrder(this.data.id);
+            }
+        },
+
+        _fromCart:function(account){
+            var productsArr;
+            this.data.account=account;
+            productsArr = cart.getCartDataFromLocal(true);
+
+            this.setData({
+                productsArr: productsArr,
+                account:account,
+                orderStatus:0
+            });
+
+            /*显示收获地址*/
+            address.getAddress((res)=> {
+                this._bindAddressInfo(res);
+            }); 
+        },
+
+        _fromOrder:function(id){
+            if(id) {
                 var that = this;
                 //下单后，支付成功或者失败后，点左上角返回时能够更新订单状态 所以放在onshow中
-                var id = this.data.id;
+                // var id = this.data.id;
                 order.getOrderInfoById(id, (data)=> {
                     that.setData({
                         orderStatus: data.status,
@@ -66,6 +72,8 @@ Page({
                 });
             }
         },
+
+
 
         /*修改或者添加地址信息*/
         editAddress:function(){

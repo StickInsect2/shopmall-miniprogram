@@ -11,12 +11,12 @@
     padding: 30rpx;
     font-size: 28rpx;
 }
-.my-header image{
+.my-header .avatar{
     height: 100rpx;
     width: 100rpx;
     border-radius: 100rpx;
 }
-.my-header text{
+.my-header .nickname{
     margin-left: 20rpx;
 }
 .my-address{

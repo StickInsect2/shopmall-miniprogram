@@ -2,7 +2,7 @@
 <view class="container category-container">
   <view class="category-box">
       <view class="left-box">
-        <block wx:for="{{categoryTypeArr}}"  wx:key="index">
+        <block wx:for="{{categoryTypeArr}}" wx:key="index">
           <view class="menu-item {{currentMenuIndex==index?'selected':''}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="changeCategory" data-title-name="{{item.name}}">
             {{item.name}}
           </view>
