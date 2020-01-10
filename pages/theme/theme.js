@@ -1,20 +1,14 @@
 import { Theme } from 'theme-model.js';
-
-
 var theme = new Theme(); //实例化  主题列表对象
-
-
 Page({
     data: {
         loadingHidden: false
     },
-
     onReady:function(){
         wx.setNavigationBarTitle({
             title: this.data.titleName
         });
     },
-
     onLoad: function (option) {
         this.data.titleName=option.name;
         this.data.id=option.id;
@@ -56,7 +50,7 @@ Page({
     //分享效果
     onShareAppMessage: function () {
         return {
-            title: 'Uaena的零食铺子',
+            title: '零食商贩 Pretty Vendor',
             path: 'pages/theme/theme?id=' + this.data.id
         }
     }

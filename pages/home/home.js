@@ -63,7 +63,7 @@ Page({
     //分享效果
     onShareAppMessage: function () {
         return {
-            title: 'Uaena的零食铺子',
+            title: '零食商贩 Pretty Vendor',
             path: 'pages/home/home'
         }
     }

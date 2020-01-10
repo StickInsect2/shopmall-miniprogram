@@ -1,8 +1,5 @@
-/* pages/theme/theme.wxss */
 @import "../tpls/base.wxss";
 @import "../tpls/products/products-tpl.wxss";
-
-
 .theme-container{
 
 }
