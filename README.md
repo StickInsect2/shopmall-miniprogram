@@ -8,3 +8,8 @@
 6. 我的页面
 
 核心业务就是商品加入购物车，下单支付，并返回用户下单信息和支付结果。
+
+![客户端令牌](https://github.com/StickInsect2/shopmall-miniprogram/master/imgs/public/客户端令牌.png)
+
+![支付](https://github.com/StickInsect2/shopmall-miniprogram/master/imgs/public/支付.png)
+
